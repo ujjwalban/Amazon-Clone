@@ -7,11 +7,12 @@ import Loginn from './Loginn';
 import {auth} from './firebasee'
 import {useStateValue} from "./StateProvider"; 
 import {useEffect} from 'react';
+import Paymentt from './Paymentt';
  
 function Home(){
     return (
     <>
-     <Header />
+     <Header/>
      <Homee/>
     </>
     ) 
@@ -29,6 +30,14 @@ function Checkout(){
     <>
       <Header/>
       <Checkoutt/>
+    </>
+  )
+}
+function Payment(){
+  return (
+    <>
+      <Header/>
+      <Paymentt/>
     </>
   )
 }
@@ -63,6 +72,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
+          <Route path="/payment" element={<Payment/>}/>
         </Routes>
       </div>
     </Router>
